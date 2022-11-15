@@ -1,0 +1,15 @@
+<div class="bg-secondary d-flex text-white justify-content-between align-items-center ps-3 pe-3" style="height: 70px; --bs-bg-opacity: .3;">
+  <h1>Navbar</h1>
+  <a href="/articles/new" id="new-article">New Article</a>
+</div>
+<div class="container mt-3">
+  <% @articles.each do |article| %>
+    <div class="card mb-3 p-3">
+      <h2 class="title">
+        <%= link_to article.title , article_path(article) %>
+      </h2>
+      <div style="max-height: 200px; overflow: hidden; text-overflow: ellipsis;"><p><%= article.content %></p></div>
+      <p class="pt-3"><%= link_to "Edit article", edit_article_path(article) %></p>
+    </div>
+  <% end %>
+</div>

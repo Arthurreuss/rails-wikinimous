@@ -1,0 +1,12 @@
+<div class="w-50 m-auto mt-5">
+  <%= form_with model: @article do |f| %>
+    <div class="d-flex flex-column">
+    <%= f.label :title%>
+    <%= f.text_field :title, class: "mt-2"%>
+    <%= f.label :content, class: "mt-2" %>
+    <%= f.text_field :content, class: "mt-2", style: "max-height: 400px;" %>
+    <%= f.submit "Submit", class: "mt-3"%>
+    <% end %>
+    </div>
+    <a href="/articles" id="button">Go back!</a>
+</div>
